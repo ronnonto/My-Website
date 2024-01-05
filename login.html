@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<style>
+		body {
+			background-image: url('bg.png');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-attachment: fixed;
+			justify-content: center;
+			text-align: center;
+			align-content: center;
+			content: center;
+			display: flex;
+			margin-top: 50px;
+			
+		}
+
+		.container {
+
+			background-color: rgba(255, 255, 255, 0.8);
+			box-shadow: 0 0 8px;
+			width: 300px;
+			height: 320px;
+			margin: auto;
+			margin-top: 50px;
+			margin-left: 550px;
+			padding: 50px;
+			border: solid;
+			border-color: #0B4F6C;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+		}
+
+		.form {
+			justify-content: center;
+			margin: auto;
+			text-align: center;
+			padding: 30px;
+		}
+
+		.input {
+			border: solid;
+			border-color: black;
+			border-radius: 7px;
+			padding: 8px;
+			width: 200px;
+		}
+
+		.loginBtn {
+			background-color: #6D9DC5;
+			color: black;
+			border-radius: 5px;
+			justify-content: center;
+			width: 90px;
+			height: 30px;
+		}
+
+		.rem {
+			margin: -15px 0 10px;
+			justify-content: space-between;
+		}
+
+		.forget {
+            margin-left: 50px;
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+        }
+
+        .forget: hover {
+        	color: black;
+        	font-weight: bold;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<form action="homepage1.html">
+			<h1>Login</h1> <hr> <br>
+		<input class="input" type="email" id="email" placeholder="Email" required> <br> <br>
+		<input class="input" type="password" id="pass" placeholder="Password" required> <br> <br> 
+
+		<button class="loginBtn" id="loginBtn">Login</button> <br><br>
+		<input class="rem" type="checkbox">Remember me 
+		  <br>
+		<input class="forget" href="#" type="checkbox">Forget Password? </a> <br>
+		<p>Dont have an account? <a href="#">Register</a>
+		</form>
+
+	</div>
+	  <script>
+	  const loginBtn = document.getElementById('loginBtn');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('pass');
+
+loginBtn.addEventListener('click', function() {
+    console.log('Button clicked!');
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    if (email === 'ronngg8@gmail.com' && password === 'saymyname') {
+        alert('Login successful!');
+        window.location.href = 'Homepage.html'; 
+    } else {
+        console.log('Incorrect email or password');
+        alert('Incorrect email or password');
+    }
+});
+
+
+	
+        
+	</script>
+</body>
+</html>
